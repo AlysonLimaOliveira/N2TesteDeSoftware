@@ -1,5 +1,11 @@
+# Build artifacts
 target/
 *.class
+
+# IDE
 /.vscode/
 .idea/
 *.iml
+
+# OS files
+.DS_Store
