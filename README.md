@@ -118,7 +118,12 @@ start target/site/jacoco/index.html
 
 ## 👨‍💻 Autores
 
-- Alyson Lima Oliveira — N2 Teste de Software (CSC)
+- Alyson Lima Oliveira —
+- Thiago Reis Trindade —
+- Thiago Fernando Sanson De Souza —
+- Jeliel Nunes Da Silva —
+- Marceu Lago Pontes Schmidt —
+- Cleberson Luis Vieira Martins Maia —
 
 ---
 
