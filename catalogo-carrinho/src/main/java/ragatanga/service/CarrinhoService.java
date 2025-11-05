@@ -18,7 +18,7 @@ public class CarrinhoService {
     private final Map<String, Produto> catalog = new HashMap<>();
 
     public CarrinhoService(EstoqueRepository estoque, FreteAPI freteApi,
-                           PaymentGateway paymentGateway, EmailService emailService) {
+            PaymentGateway paymentGateway, EmailService emailService) {
         this.estoque = estoque;
         this.freteApi = freteApi;
         this.paymentGateway = paymentGateway;
@@ -64,7 +64,7 @@ public class CarrinhoService {
         soma = soma.add(frete);
 
         // Retorna o valor final
-        return soma;
+        return soma.setScale(2, java.math.RoundingMode.HALF_UP);
+
     }
 }
-
