@@ -1,4 +1,4 @@
-package ragatanga.excecao;
+package ragatanga.exception;
 
 import org.junit.jupiter.api.Test;
 import ragatanga.exception.InsufficientStockException;
@@ -18,7 +18,7 @@ class ExceptionTest {
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
             carrinho.adicionar("SKU1", -1);
         });
-        
+
         String expectedMessage = "quantidade deve ser > 0";
         String actualMessage = exception.getMessage();
         assertTrue(actualMessage.contains(expectedMessage));
@@ -28,7 +28,7 @@ class ExceptionTest {
     void testEstoqueInsuficiente() {
         EstoqueRepository estoque = new InMemoryEstoqueRepository();
         CarrinhoService service = new CarrinhoService(estoque);
-        
+
         assertThrows(InsufficientStockException.class, () -> {
             service.verificarEstoque("SKU1", 1000);
         });
